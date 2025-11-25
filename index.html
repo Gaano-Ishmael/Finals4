@@ -3,18 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My First Bootstrap Page</title>
+<title>Iaido Mastery</title>
+
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/background.css">
+
+
+<style>
+  body {
+    background-color: #1a1f1f;
+    font-family: "Inter", sans-serif;
+    color: #eee;
+  }
+
+  h1, h2, h3, .navbar-brand {
+    font-family: "Cinzel", serif;
+  }
+
+  .hero {
+    background-image: url('kit.png');
+    background-size: cover;
+    background-position: center;
+    padding: 130px 0;
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .feature-box {
+    background-color: #223030;
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid #d4a84c;
+    transition: transform .2s ease;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-12px);
+  }
+
+  footer {
+    border-top: 1px solid #444;
+  }
+</style>
+
 <script src="js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: darkslategray;">
+<body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
   <div class="container">
-    <a class="navbar-brand" href="#">IAIDO</a>
+    <a class="navbar-brand fw-bold fs-3" href="#">IAIDO</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,50 +82,56 @@
 </nav>
 
 
-<section class="py-5 text-center" id="b" style="background-image: url('kit.png'); background-size: cover; background-position: center;">
-  <div class="container" >
-    <h1 class="display-4 fw-bold" style="color: white;">Be an Iaido Master</h1>
-    <p class="h2" style="color: black;">POWER THROUGH MOTIVATION</p>
-    <a href="#" class="btn btn-primary btn-lg">Start</a>
+<section class="hero text-center text-white">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Become an Iaido Master</h1>
+    <p class="h4 mb-4" style="color:#d4a84c;">Power Through Precision</p>
+    <a href="#" class="btn btn-outline-light btn-lg px-4">Begin</a>
   </div>
 </section>
 
 
-<section class="container py-5" >
-  <div class="row text-center" >
-    <div class="col-md-4 mb-4" style="background-color: rgb(33, 51, 51); border-radius: 30px; border: 2px solid white;">
-      <h3 style="font-weight: 800; color: white;">Quick-Draw</h3>
-      <p class="h4" style="color: white;">Be ready to strike at the most unfortunate situations where not even the eye can catch danger</p>
+<section class="container py-5">
+  <div class="row g-4 text-center">
+    
+    <div class="col-md-4">
+      <div class="feature-box">
+        <h3 class="fw-bold">Quick-Draw</h3>
+        <p>React to danger faster than the eye can track.</p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4" style="background-color: rgb(33, 51, 51); border-radius: 30px; border: 2px solid white;">
-      <h3 style="font-weight: 800; color: white;">Awareness</h3>
-      <p class="h4" style="color: white;">Be witted and aware of every tiny little detail around you, regardless if its too dark to notice, or too small to recognize</p>
+    <div class="col-md-4">
+      <div class="feature-box">
+        <h3 class="fw-bold">Awareness</h3>
+        <p>Notice every detail in your surroundings, even in darkness.</p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4" style="background-color: rgb(33, 51, 51); border-radius: 30px; border: 2px solid white;">
-      <h3 style="font-weight: 800; color: white;" >Calm and Simple</h3>
-      <p class="h4" style="color: white;">One simple strike, is enough to end a complex situation</p>
+    <div class="col-md-4">
+      <div class="feature-box">
+        <h3 class="fw-bold">Calm and Simple</h3>
+        <p>One decisive strike ends the most complex situations.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
 
 <div class="container mb-5">
-  <div class="card shadow">
-    <div class="card-body text-center bg-dark">
-      <h4 class="card-title text-white">Card</h4>
-      <p class="card-text text-muted">
-        
-      </p>
-      <a href="#" class="btn btn-outline-primary">Learn More</a>
+  <div class="card shadow-lg bg-dark text-center">
+    <div class="card-body">
+      <h4 class="text-white">Featured Iaido Masters</h4>
+      <p class="text-muted">Legends who perfected the way of the blade.</p>
+      <a href="#" class="btn btn-outline-light">Learn More</a>
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3" >
-  <p class="mb-0">Blackfooter</p>
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2025 Iaido Training • Honor • Discipline • Mastery</p>
 </footer>
 
 </body>
